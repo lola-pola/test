@@ -1,0 +1,29 @@
+
+jobs:
+  test:
+    # Test job
+
+  build:  
+    # Build Docker image
+
+  serve:
+    needs: build
+    
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Start Flask app
+      run: |
+        docker run -d -p 5000:5000 flask
+
+    - name: Test app is running
+      run: |
+        curl http://localhost:5000
+        // Add more tests to validate app is running
+
+    - name: Stop Flask app
+      if: always() 
+      run: |
+        docker stop $(docker ps -q)
