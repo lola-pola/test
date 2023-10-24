@@ -23,7 +23,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
 
-      - name: Connect to Redis
+      - name: validate curl
         # Runs a script that creates a Redis client, populates
         # the client with data, and retrieves data
         run: curl elhay-test   
