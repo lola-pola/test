@@ -18,6 +18,9 @@ jobs:
         image: nginx
         ports:
           - 80
+      lola: 
+        elhay-long:
+          image: elhay/osm:test1
       redis:
         # Docker Hub image
         image: redis
