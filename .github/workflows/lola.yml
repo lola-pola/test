@@ -18,6 +18,16 @@ jobs:
         image: nginx
         ports:
           - 80 
+      elhay-test1:
+        # Docker Hub image
+        image: nginx
+        ports:
+          - 80 
+      elhay-test2:
+        # Docker Hub image
+        image: nginx
+        ports:
+          - 80 
     steps:
       # Downloads a copy of the code in your repository before running CI tests
       - name: Check out repository code
